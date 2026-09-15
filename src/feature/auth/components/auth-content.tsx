@@ -1,7 +1,11 @@
 import { type ReactNode } from "react";
 import { LuShieldCheck } from "react-icons/lu";
-
-const AuthContent = ({ children }: { children: ReactNode }) => {
+interface AuthContentProps {
+  children: ReactNode;
+  h1?: string;
+  p?: string;
+}
+const AuthContent = ({ children, h1, p }: AuthContentProps) => {
   return (
     <div>
       <div className="mb-7 flex justify-center lg:hidden">
@@ -16,10 +20,12 @@ const AuthContent = ({ children }: { children: ReactNode }) => {
 
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-3xl font-semibold tracking-tight">Get started</h1>
+        <h1 className="text-3xl font-semibold tracking-tight">
+          {h1 || "Get started"}
+        </h1>
 
         <p className="mt-2 text-sm leading-6 text-muted-foreground">
-          Choose how you'd like to continue.
+          {p || "Choose how you'd like to continue."}
         </p>
       </div>
       {children}

@@ -8,13 +8,7 @@ interface AuthPanelProps {
 }
 
 const AuthPanel = ({ children, className = "" }: AuthPanelProps) => {
-  return (
-    <section
-      className={`relative min-h-0 overflow-hidden p-6 sm:p-8 lg:p-10 xl:p-12 ${className}`}
-    >
-      {children}
-    </section>
-  );
+  return <section className={`relative min-h-0 overflow-hidden p-6 sm:p-8 lg:p-10 xl:p-12 ${className}`}>{children}</section>;
 };
 
 const AuthLayout = () => {
@@ -32,8 +26,7 @@ const AuthLayout = () => {
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
-            backgroundImage:
-              "linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)",
+            backgroundImage: "linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px)",
             backgroundSize: "40px 40px",
           }}
         />
@@ -77,11 +70,7 @@ const AuthLayout = () => {
             <div className="relative">
               {/* Logo */}
               <div className="mb-10 flex size-16 items-center justify-center rounded-xl border border-border bg-background shadow-sm xl:mb-12 xl:size-20">
-                <img
-                  src="/image.png"
-                  alt="Logo"
-                  className="h-full w-full object-contain"
-                />
+                <img src="/image.png" alt="Logo" className="h-full w-full object-contain" />
               </div>
 
               <div className="max-w-md">
@@ -96,8 +85,7 @@ const AuthLayout = () => {
                 </h2>
 
                 <p className="mt-5 max-w-md text-sm leading-6 text-muted-foreground xl:mt-6 xl:text-base xl:leading-7">
-                  Create your account and get access to your workspace, tools,
-                  and everything you need to bring your ideas to life.
+                  Create your account and get access to your workspace, tools, and everything you need to bring your ideas to life.
                 </p>
               </div>
             </div>
@@ -110,14 +98,9 @@ const AuthLayout = () => {
                 </div>
 
                 <div>
-                  <p className="text-sm font-medium">
-                    Simple. Secure. Private.
-                  </p>
+                  <p className="text-sm font-medium">Simple. Secure. Private.</p>
 
-                  <p className="mt-1 max-w-xs text-xs leading-5 text-muted-foreground">
-                    Your information is protected with secure authentication and
-                    encrypted data.
-                  </p>
+                  <p className="mt-1 max-w-xs text-xs leading-5 text-muted-foreground">Your information is protected with secure authentication and encrypted data.</p>
                 </div>
               </div>
             </div>
@@ -132,8 +115,6 @@ const AuthLayout = () => {
             "
           >
             <div className="w-full max-w-sm">
-              {/* Mobile logo */}
-
               {/* Child auth route */}
               <Outlet />
             </div>

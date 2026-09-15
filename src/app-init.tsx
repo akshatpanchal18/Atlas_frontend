@@ -1,28 +1,33 @@
 import { useEffect, type ReactNode } from "react";
 import { useRestoreSessionQuery } from "./store/api/auth-api";
 import { useAppDispatch } from "./hooks/redux";
-import { setToken } from "./store/reducer/auth";
+import { setToken, setInitialized, clearAuth } from "./store/reducer/auth";
 import { Spinner } from "./components/custom/spinner";
+
 interface AppInitializeProps {
   children: ReactNode;
 }
 
 const AppInitialize = ({ children }: AppInitializeProps) => {
   const dispatch = useAppDispatch();
-  const { data, isSuccess, isLoading, isUninitialized } =
-    useRestoreSessionQuery();
+  const { data, isSuccess, isLoading, isUninitialized, isError } = useRestoreSessionQuery();
 
   useEffect(() => {
-    if (isSuccess) {
-      dispatch(setToken(data.data.accessToken));
+    if (isUninitialized || isLoading) return;
+
+    if (isSuccess && data?.accessToken) {
+      dispatch(setToken(data.accessToken));
+    } else {
+      dispatch(clearAuth());
     }
-  }, [isSuccess, data, dispatch]);
+
+    dispatch(setInitialized(true));
+  }, [isSuccess, isLoading, isUninitialized, isError, data, dispatch]);
 
   if (isLoading || isUninitialized) {
-    return <Spinner size="lg" />;
+    return <div style={{ padding: 40 }}>Loading...</div>; // plain div, not Spinner, to rule out Spinner bug
   }
 
-  return children;
+  return <>{children}</>;
 };
-
 export default AppInitialize;

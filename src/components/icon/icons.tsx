@@ -4,20 +4,9 @@ type IconProps = {
   className?: string;
 };
 export const GoogleLoginIcon = ({ size = 24, className }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    className={className}
-    viewBox="0 0 32 32"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width={size} height={size} className={className} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-    <g
-      id="SVGRepo_tracerCarrier"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    ></g>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
       {" "}
       <path
@@ -40,20 +29,9 @@ export const GoogleLoginIcon = ({ size = 24, className }: IconProps) => (
   </svg>
 );
 export const GithubLoginIcon = ({ size = 24, className }: IconProps) => (
-  <svg
-    width={size}
-    height={size}
-    className={className}
-    viewBox="0 0 48 48"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="#000000"
-  >
+  <svg width={size} height={size} className={className} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000">
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-    <g
-      id="SVGRepo_tracerCarrier"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    ></g>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
       {" "}
       <title>github</title>{" "}
@@ -61,14 +39,32 @@ export const GithubLoginIcon = ({ size = 24, className }: IconProps) => (
         {" "}
         <g id="invisible_box" data-name="invisible box">
           {" "}
-          <rect width="48" height="48" fill="none"></rect>{" "}
-          <rect width="48" height="48" fill="none"></rect>{" "}
+          <rect width="48" height="48" fill="none"></rect> <rect width="48" height="48" fill="none"></rect>{" "}
         </g>{" "}
         <g id="icons_Q2" data-name="icons Q2">
           {" "}
           <path d="M24,1.9a21.6,21.6,0,0,0-6.8,42.2c1,.2,1.8-.9,1.8-1.8V39.4c-6,1.3-7.9-2.9-7.9-2.9a6.5,6.5,0,0,0-2.2-3.2C6.9,31.9,9,32,9,32a4.3,4.3,0,0,1,3.3,2c1.7,2.9,5.5,2.6,6.7,2.1a5.4,5.4,0,0,1,.5-2.9C12.7,32,9,28,9,22.6A10.7,10.7,0,0,1,11.9,15a6.2,6.2,0,0,1,.3-6.4,8.9,8.9,0,0,1,6.4,2.9,15.1,15.1,0,0,1,5.4-.8,17.1,17.1,0,0,1,5.4.7,9,9,0,0,1,6.4-2.8,6.5,6.5,0,0,1,.4,6.4A10.7,10.7,0,0,1,39,22.6C39,28,35.3,32,28.5,33.2a5.4,5.4,0,0,1,.5,2.9v6.2a1.8,1.8,0,0,0,1.9,1.8A21.7,21.7,0,0,0,24,1.9Z"></path>{" "}
         </g>{" "}
       </g>{" "}
+    </g>
+  </svg>
+);
+export const EmailLoginIcon = ({ size = 24, className, color = "currentColor" }: IconProps) => (
+  <svg width={size} height={size} className={className} viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+      {" "}
+      <path
+        d="M9.00977 21.39H19.0098C20.0706 21.39 21.0881 20.9685 21.8382 20.2184C22.5883 19.4682 23.0098 18.4509 23.0098 17.39V7.39001C23.0098 6.32915 22.5883 5.31167 21.8382 4.56152C21.0881 3.81138 20.0706 3.39001 19.0098 3.39001H7.00977C5.9489 3.39001 4.93148 3.81138 4.18134 4.56152C3.43119 5.31167 3.00977 6.32915 3.00977 7.39001V12.39"
+        stroke={color}
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>{" "}
+      <path d="M1.00977 18.39H11.0098" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>{" "}
+      <path d="M1.00977 15.39H5.00977" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>{" "}
+      <path d="M22.209 5.41992C16.599 16.0599 9.39906 16.0499 3.78906 5.41992" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>{" "}
     </g>
   </svg>
 );
